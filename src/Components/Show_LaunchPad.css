@@ -1,0 +1,6 @@
+.show_launchpad{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
