@@ -7,6 +7,10 @@ color: #D9351E;
 text-align: center;
 }
 
+.launch_date{
+    color: #FFFFFF;
+}
+
 .content{
     display: flex;
     justify-content: space-evenly;
@@ -23,4 +27,32 @@ color: #FFFFFF;
 
 .launch_image{
     width: 50vw;
+}
+
+.iframe_container{
+    position: relative;
+    width: 500px;
+    height: 515px;
+    overflow: hidden;
+}
+
+.iframe_content{
+    position: absolute;
+    top: -145px;
+    left: -1350px;
+    width: 1700px;
+    height: 2000px;
+}
+
+.launch_youtube{
+    text-align: center;
+}
+
+.launch_usability{
+    width: 350px;
+    border: 2px solid #D9351E;
+    padding: 3px 10px;
+    margin: 10px;
+    border-radius: 100px;
+    text-align: center;
 }

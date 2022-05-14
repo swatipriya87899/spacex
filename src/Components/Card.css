@@ -1,7 +1,11 @@
 .card_wrap {
   width: 300px;
+  margin: auto;
   margin-top: 40px;
   font-size: 16px;
+  background-color: #000000;
+  height: 700px;
+  
 }
 
 .card_details{
@@ -50,10 +54,12 @@
 .status{
     background: #D9351E;
     border-radius: 20px 0px 0px 20px;
-    padding: 3px 10px;
-    width: 55%;
+    padding: 3px 0px;
+    padding-left: 10px;
+    width: 65%;
+    font-weight: 600;
     position: relative;
     top: 45px;
-    left: 150px;
+    left: 120px;
     
 }

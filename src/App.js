@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Routes>
     <Route path='/' element={<LaunchPad/>}/>
-    <Route path='/launch' element={<Launch/>}/>
+    <Route path='/launch/:launch_id' element={<Launch/>}/>
   </Routes>
   )
 }
