@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Launch_Component.css";
-import launch_image from "./../Images/launch_image.png";
 import YouTube from "react-youtube";
 
 const Launch_Component = (props) => {
@@ -60,7 +59,7 @@ const Launch_Component = (props) => {
         </div>
       </div>
       <div className="launch_youtube">
-        <YouTube videoId={launch_obj.youtube_id} />
+        <YouTube videoId={launch_obj.youtube_id} opts={{width: "80%", height:"300" }}/>
       </div>
     </div>
   );

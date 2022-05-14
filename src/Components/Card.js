@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import ReadMore from "./ReadMore";
 
 const Card = (props) => {
   const [topLaunch, setTopLaunch] = useState([]);
@@ -31,14 +32,16 @@ const Card = (props) => {
 
   
   return (
-    <div className="card_wrap">
+    <div className="card_wrap" id="card_group">
       {props.status==="active" ?<div className="status" style={{background:"green"}}>{props.status.toUpperCase()}</div>:
       <div className="status">{props.status.toUpperCase()}</div>
       }
       <div className="card_details">
-        <img src={props.image} width="100%" height="100%"></img>
+        <div className="card_image">
+          <img src={props.image} width="100%" height="100%"></img>
+        </div>
         <div className="card_name">{props.name}</div>
-        <div className="card_details">{props.details}</div>
+        <ReadMore text={props.details}></ReadMore>
         {topLaunch.length>0 ? <div className="top_launches_heading">Top Launches</div>:
         <div className="top_launches_heading">No Launch Available</div>
         }
@@ -46,12 +49,11 @@ const Card = (props) => {
        {/* Top 3 Lauches */}
         {topLaunch.map((launches) => {
           return (
-          <Link to={`/launch/${launches.id}`}>
+          <Link to={`/launch/${launches.id}`} style={{textDecoration:"none"}}>
           <div className="top_launches" key={launches.id}>{launches.name}</div>
           </Link>
           )
         })}
-        <div className="top_launches_box"></div>
       </div>
     </div>
   );

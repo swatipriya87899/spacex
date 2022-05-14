@@ -14,7 +14,9 @@ text-align: center;
 .content{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 20px 50px;
+    align-items: center;
 }
 
 .launch_details{
@@ -23,10 +25,11 @@ font-weight: lighter;
 font-size: 24px;
 line-height: 29px;
 color: #FFFFFF;
+text-align: center;
 }
 
 .launch_image{
-    width: 50vw;
+    width: 450px;
 }
 
 .iframe_container{
@@ -38,7 +41,7 @@ color: #FFFFFF;
 
 .iframe_content{
     position: absolute;
-    top: -145px;
+    top: -189px;
     left: -1350px;
     width: 1700px;
     height: 2000px;
@@ -49,10 +52,28 @@ color: #FFFFFF;
 }
 
 .launch_usability{
-    width: 350px;
+    width: 50%;
     border: 2px solid #D9351E;
     padding: 3px 10px;
     margin: 10px;
     border-radius: 100px;
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .iframe_container {
+        width: 317px;
+        height: 499px;
+    }
+    .content{
+        margin: auto;
+    }
+
+    .launch_usability{
+        margin: auto;
+    }
+
+    .launch_name{
+        font-size: 25px;
+    }
 }

@@ -4,8 +4,12 @@
   margin-top: 40px;
   font-size: 16px;
   background-color: #000000;
-  height: 700px;
+  min-height: 400px;
   
+}
+
+.card_image{
+  height: 150px;
 }
 
 .card_details{
@@ -35,6 +39,8 @@
   color: #ad2929;
   font-size: 20px;
   text-align: center;
+  margin-top: 30px;
+  font-weight: 400;
 }
 
 .top_launches_box{
@@ -49,6 +55,7 @@
     border-radius: 30px;
     margin: 3px 3px;
     color: #ffffff;
+    text-align: center;
 }
 
 .status{

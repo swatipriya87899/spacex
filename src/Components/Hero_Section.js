@@ -1,7 +1,7 @@
 import React from 'react';
 import spacex_bg from '../Images/spacex_bg.png';
 import './Hero_Section.css';
-import spacex_logo from '../Images/spacex_logo.png';
+import { Link } from 'react-scroll/modules';
 
 const Hero_Section = () => {
   return (
@@ -17,9 +17,11 @@ const Hero_Section = () => {
             <div className='hero_section_subHeading'>
                 We have gathered all the upcoming releases and the entire history of spaceX so that you can discover everything about the universe that we know so little
             </div>
+            <Link to="card_group" spy={true} smooth={true}>
             <div className='launchpad_button'>
                 LAUNCHPAD
             </div>
+            </Link>
         </div>
     </div>
     </div>

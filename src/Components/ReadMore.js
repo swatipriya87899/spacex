@@ -1,14 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react';
+import './ReadMore.css'
 
-const ReadMore = () => {
-    const text = children;
-    const [isReadMore, setIsReadMore] = useState(true);
-    const toggleReadMore = () => {
-      setIsReadMore(!isReadMore);
-    };
+function ReadMore(props) {
+    let text= `${props.text}`
+ const [readMore,setReadMore]=useState(false);
+  const linkName=readMore?'Read Less ':'Read More '
   return (
-    <div>ReadMore</div>
-  )
+    <div>
+      {!readMore? <div className="extra-content">{text.slice(0, 100)}</div> : text}
+      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><div>{linkName}</div></a>
+    </div>
+  );
 }
 
-export default ReadMore
+export default ReadMore;
