@@ -10,13 +10,15 @@ const Hero_Section = () => {
          <img src={spacex_bg} alt="spacex_background" className='hero_section_image'></img>
     </div>   
     <div>
-        <div className='spacex_logo'><img src={spacex_logo} alt="spacex_logo_image" className='spacex_logo_image'></img></div>
         <div className='hero_section_content'>
             <div className='hero_section_heading'>
                 EXPLORE EXPEDITIONS <br></br> IN THE UNIVERSE
             </div>
             <div className='hero_section_subHeading'>
                 We have gathered all the upcoming releases and the entire history of spaceX so that you can discover everything about the universe that we know so little
+            </div>
+            <div className='launchpad_button'>
+                LAUNCHPAD
             </div>
         </div>
     </div>

@@ -1,0 +1,26 @@
+.launch_name{
+    font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+color: #D9351E;
+text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 50px;
+}
+
+.launch_details{
+ font-style: normal;
+font-weight: lighter;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+}
+
+.launch_image{
+    width: 50vw;
+}
