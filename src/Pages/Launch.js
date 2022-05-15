@@ -9,6 +9,8 @@ const Launch = () => {
 
   return (
     <div style={{background: "#0B0B0B", minHeight:"100vh"}}>
+
+      {/* Showing all the details of launch */}
       <Launch_Component id={launch_id}></Launch_Component>
   </div>
   )

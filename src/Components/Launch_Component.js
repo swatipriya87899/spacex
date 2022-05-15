@@ -6,6 +6,7 @@ const Launch_Component = (props) => {
   //storing launch data
   let launch = {};
   const [launch_obj, setLaunch_obj] = useState({});
+
   //fetching lauch data
   const getData = async () => {
     let data = await fetch(`
@@ -19,7 +20,8 @@ const Launch_Component = (props) => {
       month: "2-digit",
       day: "2-digit",
     }).format(data.date_unix);
-    // setLaunch(data);
+
+    //storing require lauch details
     launch = {
       name: data.name,
       youtube_id: data.links.youtube_id,
@@ -34,19 +36,31 @@ const Launch_Component = (props) => {
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <div className="launch_component">
-       {console.log(launch_obj)}
       <div className="launch_name">{launch_obj.name}</div>
-      <div></div>
       <div className="content">
+
+        {/* image of launch */}
         <div className="launch_image">
           <img src={launch_obj.large_image} style={{ width: "100%" }}></img>
         </div>
+
+        {/* details of launching */}
         <div className="launch_details">
-        <div className="launch_date">Launch Date: {launch_obj.date}</div>
-        {launch_obj.reused?<div className="launch_usability">Reused</div>:
-        <div className="launch_usability">Not Reused</div>}
+
+          {/* date of launching */}
+          <div className="launch_date">Launch Date: {launch_obj.date}</div>
+
+          {/* Usibility of lauch */}
+          {launch_obj.reused ? (
+            <div className="launch_usability">Reused</div>
+          ) : (
+            <div className="launch_usability">Not Reused</div>
+          )}
+
+          {/* Wikipedia of the launch */}
           <a href={launch_obj.wikipedia}>
             <div className="iframe_container">
               <iframe
@@ -58,8 +72,13 @@ const Launch_Component = (props) => {
           </a>
         </div>
       </div>
+
+      {/* You Tube Video of the launch */}
       <div className="launch_youtube">
-        <YouTube videoId={launch_obj.youtube_id} opts={{width: "80%", height:"300" }}/>
+        <YouTube
+          videoId={launch_obj.youtube_id}
+          opts={{ width: "80%", height: "300" }}
+        />
       </div>
     </div>
   );

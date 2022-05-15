@@ -61,10 +61,18 @@ text-align: center;
 }
 
 @media screen and (max-width: 600px) {
-    .iframe_container {
+    /* .iframe_container {
         width: 317px;
         height: 499px;
+    } */
+    .iframe_content{
+        position: absolute;
+        top: -1px;
+        left: -250px;
+        width: 1700px;
+        height: 2000px;
     }
+    
     .content{
         margin: auto;
     }

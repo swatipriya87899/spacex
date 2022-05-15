@@ -8,8 +8,10 @@ const Show_LaunchPad = () => {
 
   //fetching launchpads from API
   const getData = async () => {
-    const launchPad_data = await fetch(`https://api.spacexdata.com/v4/launchpads`).then((res) => res.json());
-    let launchPad_array=await launchPad_data.map((lauchpad) => {
+    const launchPad_data = await fetch(
+      `https://api.spacexdata.com/v4/launchpads`
+    ).then((res) => res.json());
+    let launchPad_array = await launchPad_data.map((lauchpad) => {
       //Setting Values of LauchPad's required data
       let launchPad_individual_data = {
         id: `${lauchpad.id}`,
@@ -19,7 +21,7 @@ const Show_LaunchPad = () => {
         status: `${lauchpad.status}`,
         launch: lauchpad.launches,
       };
-      return launchPad_individual_data
+      return launchPad_individual_data;
     });
     setLaunchPad_data(launchPad_array);
   };
@@ -30,6 +32,7 @@ const Show_LaunchPad = () => {
 
   return (
     <div className="show_launchpad">
+      {/* Sending Details of launpads to card for Displaying */}
       {launchPad_data &&
         launchPad_data.map((data) => {
           return (
